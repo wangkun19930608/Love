@@ -12,3 +12,12 @@
 http://loveyue4.sinaapp.com/ http://loveyue5.sinaapp.com/ http://loveyue6.sinaapp.com/ 
 http://loveyue7.sinaapp.com/ http://loveyue8.sinaapp.com/ 
 
+版本记录:
+20180817 整理并发布到网址:https://github.com/wangkun19930608/WithYou/
+
+后期陆续开发功能,根据参数直接修改对象名字.
+直接前台提交数据变化页面.
+添加对应页面的登录留言评论功能.
+添加匿名登录评论功能.
+添加感谢功能.
+添加图片存储功能转移.

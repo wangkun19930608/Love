@@ -199,7 +199,14 @@ ch = canvas.height = window.innerHeight,cy = ch / 2;
 Draw();
 };
 
-setTimeout(function() {
-		Init();
-		window.addEventListener('resize', Init, false);
-}, 15);
+// setTimeout(function() {
+		
+		// Init();
+		// window.addEventListener('resize', Init, false);
+// }, 15000);
+
+function showSong() {
+		
+		 Init();
+		 window.addEventListener('resize', Init, false);
+ };

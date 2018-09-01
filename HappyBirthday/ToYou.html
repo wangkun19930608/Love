@@ -131,7 +131,9 @@ input[type="range"]::-ms-fill-upper {
 		<script type="text/javascript" src="./jscss/snowstorm.js"></script>
 		<!-- 打字机效果-->		
 		<script type="text/javascript" src="./jscss/text.js"></script>
-		
+		<!-- 画爱心-->
+		<script type="text/javascript" src="./jscss/ga.js" async=""></script>
+		<script type="text/javascript" src="./jscss/heart.js"></script>
 		<!-- 移动div-->
 		<script type="text/javascript" src="./jscss/move.js"></script>
 		<!-- 显示时间 -->
@@ -170,8 +172,8 @@ input[type="range"]::-ms-fill-upper {
 	
 		<script type="text/javascript">
 			//setTimeout(makesnake, 42000);
-			//setTimeout(makesnake, 00000);
-			makesnake();
+			setTimeout(makesnake, 2000);
+			//makesnake();
 			function getQueryString(name) {
 				var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
 				var r = window.location.search.substr(1).match(reg);
@@ -304,9 +306,12 @@ input[type="range"]::-ms-fill-upper {
 			</div>
 			
 			</span>
+			<!-- 设置生日音乐 -->
+		<script type="text/javascript" src="./jscss/music.js"></script>
 			<script type="text/javascript">
 				//setTimeout("showTime()", 40000);
-				setTimeout("setTimeout()", 10000);
+				//setTimeout("setTimeout()", 10000);
+				//setTimeout(showSong, 10000);
 			</script>
 			
 			
@@ -332,10 +337,7 @@ input[type="range"]::-ms-fill-upper {
   </div>
   
   
-<!-- 设置生日音乐 -->
-		<script type="text/javascript" src="./jscss/music.js"></script>
+
 		
-		<!-- 画爱心-->
-		<script type="text/javascript" src="./jscss/ga.js" async=""></script>
-		<script type="text/javascript" src="./jscss/heart.js"></script>
+		
 </body>

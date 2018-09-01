@@ -25,7 +25,7 @@ canvas {
 }
 #wishes {
   width: 20em;
-  margin: calc(50vh - 6.7em) auto;
+  margin: calc(20vh - 6.7em) auto;
   border: 1px dotted;
   text-align: center;
   background: hsla(210, 50%, 15%, 0.75);
@@ -141,7 +141,7 @@ input[type="range"]::-ms-fill-upper {
 		<!-- 设置文字跟随鼠标 -->
 		<script type="text/javascript" src="./jscss/makesnake.js"></script>
 		
-		<script type="text/javascript" src="./jscss/jquery.min.js"></script>
+		<!-- <script type="text/javascript" src="./jscss/jquery.min.js"></script> -->
 		<script src="./jscss/tripledes.js"></script>
 		<script src="./jscss/mode-ecb.js"></script>
 		
@@ -250,7 +250,7 @@ input[type="range"]::-ms-fill-upper {
 			var d = "Yf+2rb5E2VgB5fAOyqip22Wa49G+UpTPOG70JB3a1rI2MzCghESql9LaUSw+aE5I";
 			if(d===encryptByDES(encryptByDES(encryptByDES(who,key),key),key)){
 				var text="7OE/ZksCU6cPznijumHsp8fOPqfHxgLdOf9DxsuY8bcIRBNYXdNJ1CPKTYcqxOsv4oi5Hiu2sUP1L5EKV+cbxF5X+55vP7b3eORfwqf8YbOFgX/C3x7BtxdrW4WZcLowA1sXSG5ZvuPQCW8t0a0aJu4hNxBdppeEmkDQMNtA2bJYKM7a+mFpeEHm/W47x4dcZiT8RvIlkHf2uErEz1Sp+v2ns9jjLFBaUXFEGmsx3ho5Vz+55PHUSMYKpYFEazamPb/jh0/unzqNOb3tEvfNDoXHEMNvIZzaMRhNYF5TNxBVuPoPll4WuW34Uipze4Q2jclqQ8zOmzOAGD5rIHisNfCd91iWFn0dNTR+wEjqaBG4FETuQ4tPoxdVxFhUeZ0lXkB/y9IZbuWSG9T/HpWblm2ZZNOK7a9b1RK4XV2yDRqk+tMj4UXlwdamidtsy/EcuIC3vl9QgbHfDliqjl2tWwcCQv6isaA4wZoJuWE5FoiISuF6IGSWkb4RCb0kKqA+oIQ9uIyIKxjHJfCywJqWyKT60yPhReXBgiXu0474LIKa0tOvf+7oj7D4QID0mCaBBlCLvfgJ6rCi5tC6DIlPd4wt5qYCLwot9JE5zMDq9SgQC6RoixtmLvTLpbsXqi1dOf9DxsuY8bdIi2kSMWJt+YXOaYqfrCmdlCkhvDsS3V8DWxdIblm+48E45h4WjWkZOygAekZt164D4idy66Cq+1NJYajf641LKIi09CK6xn+Gnv61pCzPdcdM9fnJxP/xSIQs0yY3M75PXULDcp0i3wW3BuQ6SULZFheb/wTty9t7yAvKfdZh7APGQS3415oIUf7MKOoH+ADy6hp69J2oySdHcxRmw6Rl5jm3zn2kOAlroCp/97+qcIfUU/6A6oGG5PTmKucyWOy+yPaP+UBt/cYKpYFEazamfNaH29rJrIS/MpVaIXtZQFI3+PA7ifwntMN1qc+KdGpL/8Fiknp6asY9F3/NucfISIQs0yY3M77viLdg95jLKoROHLt5AFTohE4cu3kAVOgGTmO/R6NEaR9IDoDZ4jJTUHD0QzFNhiEhvojP6vL/0Q==";
-				var string = decryptByDES(text,b);
+				var string = decryptByDES(text,encryptByDES(encryptByDES(who,key),key));
 				var t= decodeURI(string);
 				document.getElementById('contentToWrite').innerHTML=t;
 				writeContent(true);

@@ -1,130 +1,364 @@
-
+<!DOCTYPE html>
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<title>Happy Everyday!</title>
-		<meta name="author" content="Mike">
-		
-		<link rel="stylesheet" href="./jscss/style.css" type="text/css" media="all">
-		<!--导库-->
-		<script type="text/javascript" src="./jscss/jquery.js"></script>
-		<!-- 图片幻灯片效果-->
-		<script type="text/javascript" src="./jscss/roundabout.js"></script>
-		<script type="text/javascript" src="./jscss/roundabout_shapes.js"></script>
-		<script type="text/javascript" src="./jscss/gallery_init.js"></script>
-		<!-- 下雪-->
-		<script type="text/javascript" src="./jscss/snowstorm.js"></script>
-		<!-- 打字机效果-->		
-		<script type="text/javascript" src="./jscss/text.js"></script>
-		<!-- 画爱心-->
-		<script type="text/javascript" src="./jscss/ga.js" async=""></script>
-		<script type="text/javascript" src="./jscss/heart.js"></script>
-		<!-- 移动div-->
-		<script type="text/javascript" src="./jscss/move.js"></script>
-		<!-- 显示时间 -->
-		<script type="text/javascript" src="./jscss/time.js"></script>
-		<!-- 设置文字跟随鼠标 -->
-		<script type="text/javascript" src="./jscss/makesnake.js"></script>
-		
-		
-		</head><body>
-		<!-- thanks for watching! -->
-		<span id="span0" class="spanstyle">T</span><span id="span1" class="spanstyle">h</span>
-		<span id="span2" class="spanstyle">a</span><span id="span3" class="spanstyle">n</span>
-		<span id="span4" class="spanstyle">k</span><span id="span5" class="spanstyle">s</span><span id="span6" class="spanstyle">
-		 </span><span id="span7" class="spanstyle">f</span><span id="span8" class="spanstyle">o</span><span id="span9" class="spanstyle">r</span>
-		 <span id="span10" class="spanstyle"> </span><span id="span11" class="spanstyle">w</span>
-		 <span id="span12" class="spanstyle">a</span><span id="span13" class="spanstyle">t</span><span id="span14" class="spanstyle">c</span><span id="span15" class="spanstyle">h</span>
-		 <span id="span16" class="spanstyle">i</span><span id="span17" class="spanstyle">n</span><span id="span18" class="spanstyle">g</span><span id="span19" class="spanstyle">!</span>
-	
 
-	
-		<script type="text/javascript">
-			//setTimeout(makesnake, 42000);
-			setTimeout(makesnake, 3000);
-		</script>
-		<!--#Header-->
-		<div id="header" style="opacity:0.85">
-			<div id="title">
-				Have a good day!
-			</div>
-		</div>
+<title>生日快乐卡拉ok</title>
 
-		<!-- #myContent -->
-		<div id="myContent">
-				<span id="blink" style="display: none;">_</span></div>
-		<div id="contentToWrite" style="display:none">
-			一时间不知道从哪说起,         <br>
-				<!-- 真爱来了，我们要好好把    <br> -->
-				<!-- 一时间不知道从哪说起,         <br> -->
-				<!-- 真爱来了，我们要好好把握。不管面临多大的压力，<br> -->
-				<!-- 不管前面的路如何崎岖.<br> -->
-				<!-- 不管经历过什么,我仍坚信最浪漫的事就是和<br> -->
-				<!-- 你一起慢慢变老.<br> -->
-				<!-- 还记得否,曾经的点点滴滴，从相识到现在，<br> -->
-				<!-- 从冷漠到关心,从谢绝到依赖，从生疏到相爱,<br> -->
-				<!-- 一切似乎都是那么遥远,又似乎那么触手可及.<br> -->
-				<!-- 正如某人说的那样,但求岁月静好,现世安稳.<br> -->
-				<!-- 一生守候不是一句简单而苍白的山盟海誓，<br> -->
-				<!-- 而是无数个平淡的日子同舟共济，相濡以沫.<br> -->
-				<!-- 相信右下角的计时器,将永远继续下去,直至数据溢出.<br> -->
-				<!-- <br> -->
-				<!-- -----------------------Just for You, Yue<br> -->
-		</div>
-		<script type="text/javascript">
-			writeContent(true);
-		</script>
-		
+<style>
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,500,300,600,700,800);
+body {
+  height: 100vh;
+  background-image: radial-gradient(#374566, #010203);
+  color: #ccc;
+  font-family: Raleway;
+  letter-spacing: 0.15em;
+  font-size: 20px;
+}
+canvas {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+}
+#wishes {
+  width: 20em;
+  margin: calc(50vh - 6.7em) auto;
+  border: 1px dotted;
+  text-align: center;
+  background: hsla(210, 50%, 15%, 0.75);
+}
+span {
+  display: inline-block;
+}
+span.jump {
+  animation: jump 0.25s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0s 2 alternate;
+}
+@keyframes jump {
+  to {
+    transform: translateY(-0.7em);
+  }
+}
 
-		<!-- #container -->
-		<div id="container">
-			<ul id="myRoundabout" class="roundabout-holder" style="padding: 0px; position: relative; z-index: 100;">
-		  	<li class="roundabout-moveable-item roundabout-in-focus" current-scale="1.0000" style="position: absolute; left: 122px; top: 87px; width: 350px; height: 222px; opacity: 1; z-index: 400; font-size: 16px;"><img src="./jscss/1.jpg" alt=""></li>
-			<li class="roundabout-moveable-item" current-scale="0.7927" style="position: absolute; left: -0.4px; top: 110px; width: 277.445px; height: 175.9794px; opacity: 1; z-index: 296; font-size: 12.68px;"><img src="./jscss/2.jpg" alt=""></li>
-			<li class="roundabout-moveable-item" current-scale="0.4573" style="position: absolute; left: 473.8px; top: 147.2px; width: 160.055px; height: 101.5206px; opacity: 1; z-index: 129; font-size: 7.32px;"><img src="./jscss/3.jpg" alt=""></li>
-			<li class="roundabout-moveable-item" current-scale="0.4573" style="position: absolute; left: -39.8px; top: 147.2px; width: 160.055px; height: 101.5206px; opacity: 1; z-index: 129; font-size: 7.32px;"><img src="./jscss/4.jpg" alt=""></li>
-			<li class="roundabout-moveable-item" current-scale="0.7927" style="position: absolute; left: 317px; top: 110px; width: 277.445px; height: 175.9794px; opacity: 1; z-index: 296; font-size: 12.68px;"><img src="./jscss/5.jpg" alt=""></li>
-		  </ul>
-		</div>
-		<script type="text/javascript">
-			//setTimeout(move, 15000);
-			setTimeout(move, 2000);
-		</script>
-  		
-  		<!-- #bg -->
-		<div id="bg">
-			<canvas id="canvas" width="1583" height="709"><c style="color: #FFF; text-shadow:2px 3px 3px #222; font-family:Microsoft YaHei; font-size:50px">你的浏览器过时了,试试火狐吧!</c></canvas>
-		</div>
+#pleaseClick {
+  position: absolute;
+  background: hsla(210, 50%, 15%, 0.75);
+  font-size: 80%;
+  width: 10em;
+  text-align: center;
+  left: calc(50vw - 5em);
+  top: calc(50vh - 12.5em);
+  animation: jump 1s ease-in-out infinite alternate;
+}
+#pleaseClick span {
+  font-size: 200%;
+}
 
-		<!-- #time -->
-		<div id="time">
-			<span id="show">
-			
-			<div id="pleaseClick">(You can click blew)<br><span></span></div>
-			<div id="wishes">
-			  <p id="p1"></p>
-			  <p id="p2"></p>
-			  <p id="p3"></p>
-			  <p id="p4"></p>
-			  <p class="control" style="display: none;" ><label for="inputSpeed"><!--Speed: --></label><br><input type="range" id="inputSpeed" min="0.1" max="2" step="0.1" value="0.5"></p>
-			</div>
-			
-			</span>
-			<script type="text/javascript">
-				//setTimeout("showTime()", 40000);
-				setTimeout("showTime()", 1000);
-			</script>
-			
-			
-		</div>
-		
-		
-		
-		
+.control {
+  text-align: center;
+}
 
-	
-	
+input[type="range"],
+input[type="range"]::-webkit-slider-runnable-track,
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 18em;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  background-color: #777;
+  width: 20px;
+  height: 20px;
+  border: 3px solid #374566;
+  border-radius: 50%;
+  margin-top: -9px;
+}
+
+input[type="range"]::-moz-range-thumb {
+  background-color: #777;
+  width: 15px;
+  height: 15px;
+  border: 3px solid #333;
+  border-radius: 50%;
+}
+
+input[type="range"]::-ms-thumb {
+  background-color: #777;
+  width: 20px;
+  height: 20px;
+  border: 3px solid #333;
+  border-radius: 50%;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  background-color: #777;
+  height: 3px;
+}
+
+input[type="range"]:focus::-webkit-slider-runnable-track {
+  outline: none;
+}
+
+input[type="range"]::-moz-range-track {
+  background-color: #777;
+  height: 3px;
+}
+
+input[type="range"]::-ms-track {
+  background-color: #777;
+  height: 3px;
+}
+
+input[type="range"]::-ms-fill-lower {
+  background-color: HotPink;
+}
+
+input[type="range"]::-ms-fill-upper {
+  background-color: black;
+}
+</style>
+</head>
+<body>
+<canvas id="canvas" width="1920" height="948"></canvas>
+<div id="pleaseClick">Please click<br><span>☟</span></div>
+<div id="wishes">
+  <p id="p1"></p>
+  <p id="p2"></p>
+  <p id="p3"></p>
+  <p id="p4"></p>
+  <p class="control"><label for="inputSpeed"><!--Speed: --></label><br><input type="range" id="inputSpeed" min="0.1" max="2" step="0.1" value="0.5"></p>
+</div>
+
+<script>
+
+function getQueryString(name) {
+    var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+    var r = window.location.search.substr(1).match(reg);
+    if (r != null) return decodeURI(r[2]); return null;
+ }
  
  
- <div style="display:none">
+ var a = getQueryString("firstname");
+ var b = getQueryString("lastname");
+ var firstName = "Bob";
+ var lastName = "Wang";
+ if(null!=a){
+	firstName = a;
+	 if(null!=b){
+		lastName = b;
+	}
+	else{
+		lastName = "";
+	}
+ }
+ 
+const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+
+const notes = [
+  {f:262,d:.5,t:"Hap",p:p1},
+  {f:262,d:.5,t:"py ",p:p1},
+  {f:294,d:1,t:"Birth",p:p1},
+  {f:262,d:1,t:"day ",p:p1},
+  {f:349,d:1,t:"To ",p:p1},
+  {f:330,d:2,t:"You",p:p1},
+  
+  {f:262,d:.5,t:"Hap",p:p2},
+  {f:262,d:.5,t:"py ",p:p2},
+  {f:294,d:1,t:"Birth",p:p2},
+  {f:262,d:1,t:"day ",p:p2},
+  {f:392,d:1,t:"To ",p:p2},
+  {f:349,d:2,t:"You",p:p2},
+  
+  {f:262,d:.5,t:"Hap",p:p3},
+  {f:262,d:.5,t:"py ",p:p3},
+  {f:523,d:1,t:"Birth",p:p3},
+  {f:440,d:1,t:"day ",p:p3},
+  {f:349,d:1,t:"Dear ",p:p3},
+  {f:330,d:1,t:firstName,p:p3},
+  {f:294,d:3,t:lastName,p:p3},
+  
+  {f:466,d:.5,t:"Hap",p:p4},
+  {f:466,d:.5,t:"py ",p:p4},
+  {f:440,d:1,t:"Birth",p:p4},
+  {f:349,d:1,t:"day ",p:p4},
+  {f:392,d:1,t:"To ",p:p4},
+  {f:349,d:2,t:"You",p:p4},
+];
+
+//DOM
+notes.map((n) => createSpan(n));
+
+function createSpan(n){
+  n.sp = document.createElement("span");
+  n.sp.innerHTML = n.t;
+  n.p.appendChild(n.sp);
+}
+
+// SOUND
+let speed = inputSpeed.value;
+let flag = false;
+let sounds = [];
+
+class Sound{
+  constructor(freq,dur,i){
+    this.stop = true;
+    this.frequency = freq;// la frecuencia
+    this.waveform = "triangle";// la forma de onda
+    this.dur = dur;// la duración en segundos
+    this.speed = this.dur*speed;
+    this.initialGain = .15;
+    this.index = i;
+    this.sp = notes[i].sp
+  }
+  
+  cease(){
+    this.stop = true;
+    this.sp.classList.remove("jump");
+    //this.sp.style.animationDuration = `${this.speed}s`;
+    if(this.index < sounds.length-1){sounds[this.index+1].play();}
+    if(this.index == sounds.length-1){flag = false;}
+  }
+  
+  play(){
+   // crea un nuevo oscillator
+   this.oscillator = audioCtx.createOscillator();
+   // crea un nuevo nodo de ganancia 
+   this.gain = audioCtx.createGain();
+   // establece el valor inicial del volumen del sonido 
+   this.gain.gain.value = this.initialGain;
+   // establece el tipo de oscillator  
+   this.oscillator.type = this.waveform;
+   // y el valor de la frecuencia 
+   this.oscillator.frequency.value = this.frequency;
+   // el volumen del sonido baja exponencialmente     
+   this.gain.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + this.speed);
+   // conecta el oscillator con el nodo de ganancia 
+   this.oscillator.connect(this.gain);
+   // y la ganancia con el dispositivo de destino
+   this.gain.connect(audioCtx.destination);
+   // inicia el oscillator 
+   this.oscillator.start(audioCtx.currentTime);
+   this.sp.setAttribute("class", "jump");
+   this.stop = false;
+   // para el oscillator después de un tiempo (this.speed) 
+   this.oscillator.stop(audioCtx.currentTime + this.speed); 
+   this.oscillator.onended = ()=> {this.cease();}
+  }  
+}
+
+for(let i=0; i < notes.length; i++){
+  let sound = new Sound(notes[i].f, notes[i].d,i);
+  sounds.push(sound);
+}
+
+
+// EVENTS
+wishes.addEventListener("click",function(e){
+  if(e.target.id != "inputSpeed" && !flag){
+  sounds[0].play();
+  flag = true;}
+  },false);
+                        
+                        
+inputSpeed.addEventListener("input",function(e){
+  speed = this.value;
+  sounds.map((s) => {
+    s.speed = s.dur*speed
+  });
+},false);
+
+// CANVAS
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
+let cw = canvas.width = window.innerWidth,
+  cx = cw / 2;
+let ch = canvas.height = window.innerHeight,
+  cy = ch / 2;
+
+let requestId = null;
+
+const colors = ["#93DFB8","#FFC8BA","#E3AAD6","#B5D8EB","#FFBDD8"];
+
+class Particle{
+  constructor(){
+    this.x = Math.random() * cw;
+    this.y = Math.random() * ch;
+    this.r = 15 + ~~(Math.random() * 20);//radius of the circumcircle
+    this.l = 3 + ~~(Math.random() * 2);//polygon sides
+    this.a = 2*Math.PI/this.l;// angle between polygon vertices
+    this.rot = Math.random()*Math.PI;// polygon rotation
+    this.speed = .05 + Math.random()/2;
+    this.rotSpeed = 0.005 + Math.random()*.005;
+    this.color = colors[~~(Math.random() * colors.length)];
+  }
+  update(){
+    if(this.y < -this.r){
+      this.y = ch + this.r;
+      this.x = Math.random() * cw;
+    }
+    this.y -= this.speed;
+  }
+  draw(){
+    ctx.save();
+    ctx.translate(this.x,this.y);
+    ctx.rotate(this.rot);
+    ctx.beginPath();
+    for( let i = 0; i < this.l; i++ ){
+		let x = this.r * Math.cos( this.a*i );
+		let y = this.r * Math.sin( this.a*i );
+		ctx.lineTo(x, y);
+    }
+    ctx.closePath();
+    ctx.lineWidth = 4;
+    ctx.strokeStyle = this.color;
+    ctx.stroke();
+    
+    ctx.restore();
+  }
+  
+}
+
+let particles = [];
+for(let i = 0; i < 20; i++){
+let p = new Particle();
+particles.push(p)
+}
+
+
+
+function Draw() {
+requestId = window.requestAnimationFrame(Draw);
+//ctx.globalAlpha=0.65;
+ctx.clearRect(0,0,cw,ch);
+particles.map((p) => {
+  p.rot += p.rotSpeed;
+  p.update();
+  p.draw();
+})
+
+}
+
+
+function Init() {
+	if (requestId) {
+		window.cancelAnimationFrame(requestId);
+		requestId = null;
+}
+
+
+cw = canvas.width = window.innerWidth,cx = cw / 2;
+ch = canvas.height = window.innerHeight,cy = ch / 2;
+
+//particles.map((p) => p.update());
+Draw();
+};
+
+setTimeout(function() {
+		Init();
+		window.addEventListener('resize', Init, false);
+}, 15);
+
+
+</script>
+
+<div style="display:none">
   <!-- visitors -->
   <!-- github blog-->
   <script type="text/javascript">
@@ -134,8 +368,5 @@
   <!--all blog-->
   <script src="https://s13.cnzz.com/z_stat.php?id=1264550437&web_id=1264550437" language="JavaScript"></script>
   </div>
-  
-  
-<!-- 设置生日音乐 -->
-		<script type="text/javascript" src="./jscss/music.js"></script>
-</body>
+<!-- saved from url=(0056)http://www.17sucai.com/preview/1/2017-10-09/ok/demo.html -->
+</body></html>

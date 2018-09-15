@@ -7,7 +7,11 @@ function writeContent(init){
 	}
 	if(charIndex==-1){
 		charIndex = 0;
-		stringLength = inputText.length;
+		if(inputText!=null){
+			stringLength = inputText.length;
+		}else{
+			return;
+		}
 	}
 	var initString = document.getElementById('myContent').innerHTML;
 	initString = initString.replace(/<SPAN.*$/gi,"");

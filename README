@@ -4,6 +4,9 @@
 原情人节快乐项目代码:https://github.com/xmflswood/xmflswood.github.io'
 原项目演示网站:http://xn--jdya8114a.com/
 
+原结婚纪念日项目代码：https://github.com/hackerzhou/Love
+原项目演示网站：https://wangkun19930608.github.io/WithYou/Love/
+
 原生日快乐项目演示网站:http://www.17sucai.com/pins/demo-show?id=26499
 
 
@@ -14,6 +17,10 @@ http://loveyue7.sinaapp.com/ http://loveyue8.sinaapp.com/
 
 版本记录:
 20180817 整理并发布到网址:https://github.com/wangkun19930608/WithYou/
+
+20180901 生日添加自定义姓名
+
+20180916 添加生日信息加密处理
 
 后期陆续开发功能,根据参数直接修改对象名字.
 直接前台提交数据变化页面.

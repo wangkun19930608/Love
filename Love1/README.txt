@@ -1,3 +1,7 @@
 这里，要修改的地方主要有：
 1.时间：请修改love.html,第188行，setfullyear设置年月日，然后设置时，分，秒，这里设置的是在一起的开始时间，程序会自动计算己有多长时间。
 2.修改你要表白说的话，请修改Love.html第23行开始。
+
+3.博客修改出处为:http://blog.csdn.net/wuxia2001
+
+https://wangkun19930608.github.io/WithYou/Love1/ 

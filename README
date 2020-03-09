@@ -1,7 +1,7 @@
 
 
 这个是一个项目的整合了,其中的项目的代码如下:
-原情人节快乐项目代码:https://github.com/xmflswood/xmflswood.github.io'
+原情人节快乐项目代码:https://github.com/xmflswood/xmflswood.github.io
 原项目演示网站:http://xn--jdya8114a.com/
 
 原结婚纪念日项目代码：https://github.com/hackerzhou/Love
@@ -14,6 +14,8 @@
 原代码演示位置:http://loveyue1.sinaapp.com/ http://loveyue2.sinaapp.com/ http://loveyue3.sinaapp.com/ 
 http://loveyue4.sinaapp.com/ http://loveyue5.sinaapp.com/ http://loveyue6.sinaapp.com/ 
 http://loveyue7.sinaapp.com/ http://loveyue8.sinaapp.com/ 
+这个部分的代码，没有找到上级作者，只能默认为原作者了。
+
 
 版本记录:
 20180817 整理并发布到网址:https://github.com/wangkun19930608/WithYou/
@@ -22,9 +24,11 @@ http://loveyue7.sinaapp.com/ http://loveyue8.sinaapp.com/
 
 20180916 添加生日信息加密处理
 
-后期陆续开发功能,根据参数直接修改对象名字.
-直接前台提交数据变化页面.
-添加对应页面的登录留言评论功能.
-添加匿名登录评论功能.
-添加感谢功能.
-添加图片存储功能转移.
+20190215 添加表白集合的第3个模版的可修改版本（mrxn提供）
+
+[]后期陆续开发功能,根据参数直接修改对象名字.
+[]直接前台提交数据变化页面.
+[]添加对应页面的登录留言评论功能.
+[]添加匿名登录评论功能.
+[]添加感谢功能.
+[]添加图片存储功能转移.

@@ -1,132 +1,3 @@
-<!DOCTYPE html>
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
-<title>生日快乐卡拉ok</title>
-
-<style>
-@import url(https://fonts.googleapis.com/css?family=Raleway:400,500,300,600,700,800);
-body {
-  height: 100vh;
-  background-image: radial-gradient(#374566, #010203);
-  color: #ccc;
-  font-family: Raleway;
-  letter-spacing: 0.15em;
-  font-size: 20px;
-}
-canvas {
-  position: absolute;
-  z-index: -1;
-  top: 0;
-}
-#wishes {
-  width: 20em;
-  margin: calc(50vh - 6.7em) auto;
-  border: 1px dotted;
-  text-align: center;
-  background: hsla(210, 50%, 15%, 0.75);
-}
-span {
-  display: inline-block;
-}
-span.jump {
-  animation: jump 0.25s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0s 2 alternate;
-}
-@keyframes jump {
-  to {
-    transform: translateY(-0.7em);
-  }
-}
-
-#pleaseClick {
-  position: absolute;
-  background: hsla(210, 50%, 15%, 0.75);
-  font-size: 80%;
-  width: 10em;
-  text-align: center;
-  left: calc(50vw - 5em);
-  top: calc(50vh - 12.5em);
-  animation: jump 1s ease-in-out infinite alternate;
-}
-#pleaseClick span {
-  font-size: 200%;
-}
-
-.control {
-  text-align: center;
-}
-
-input[type="range"],
-input[type="range"]::-webkit-slider-runnable-track,
-input[type="range"]::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  width: 18em;
-}
-
-input[type="range"]::-webkit-slider-thumb {
-  background-color: #777;
-  width: 20px;
-  height: 20px;
-  border: 3px solid #374566;
-  border-radius: 50%;
-  margin-top: -9px;
-}
-
-input[type="range"]::-moz-range-thumb {
-  background-color: #777;
-  width: 15px;
-  height: 15px;
-  border: 3px solid #333;
-  border-radius: 50%;
-}
-
-input[type="range"]::-ms-thumb {
-  background-color: #777;
-  width: 20px;
-  height: 20px;
-  border: 3px solid #333;
-  border-radius: 50%;
-}
-
-input[type="range"]::-webkit-slider-runnable-track {
-  background-color: #777;
-  height: 3px;
-}
-
-input[type="range"]:focus::-webkit-slider-runnable-track {
-  outline: none;
-}
-
-input[type="range"]::-moz-range-track {
-  background-color: #777;
-  height: 3px;
-}
-
-input[type="range"]::-ms-track {
-  background-color: #777;
-  height: 3px;
-}
-
-input[type="range"]::-ms-fill-lower {
-  background-color: HotPink;
-}
-
-input[type="range"]::-ms-fill-upper {
-  background-color: black;
-}
-</style>
-</head>
-<body>
-<canvas id="canvas" width="1920" height="948"></canvas>
-<div id="pleaseClick">Please click<br><span>☟</span></div>
-<div id="wishes">
-  <p id="p1"></p>
-  <p id="p2"></p>
-  <p id="p3"></p>
-  <p id="p4"></p>
-  <p class="control"><label for="inputSpeed"><!--Speed: --></label><br><input type="range" id="inputSpeed" min="0.1" max="2" step="0.1" value="0.5"></p>
-</div>
-
-<script>
 const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 
 const notes = [
@@ -149,8 +20,8 @@ const notes = [
   {f:523,d:1,t:"Birth",p:p3},
   {f:440,d:1,t:"day ",p:p3},
   {f:349,d:1,t:"Dear ",p:p3},
-  {f:330,d:1,t:"Feng",p:p3},
-  {f:294,d:3,t:"Feng",p:p3},
+  {f:330,d:1,t:"Xiao",p:p3},
+  {f:294,d:3,t:"Ming",p:p3},
   
   {f:466,d:.5,t:"Hap",p:p4},
   {f:466,d:.5,t:"py ",p:p4},
@@ -328,23 +199,14 @@ ch = canvas.height = window.innerHeight,cy = ch / 2;
 Draw();
 };
 
-setTimeout(function() {
-		Init();
-		window.addEventListener('resize', Init, false);
-}, 15);
+// setTimeout(function() {
+		
+		// Init();
+		// window.addEventListener('resize', Init, false);
+// }, 15000);
 
-
-</script>
-
-<div style="display:none">
-  <!-- visitors -->
-  <!-- github blog-->
-  <script type="text/javascript">
-  var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
-  document.write(unescape("%3Cspan id='cnzz_stat_icon_1271464027'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s13.cnzz.com/z_stat.php%3Fid%3D1271464027%26online%3D1%26show%3Dline' type='text/javascript'%3E%3C/script%3E"));
-  </script>
-  <!--all blog-->
-  <script src="https://s13.cnzz.com/z_stat.php?id=1264550437&web_id=1264550437" language="JavaScript"></script>
-  </div>
-<!-- saved from url=(0056)http://www.17sucai.com/preview/1/2017-10-09/ok/demo.html -->
-</body></html>
+function showSong() {
+		
+		 Init();
+		 window.addEventListener('resize', Init, false);
+ };

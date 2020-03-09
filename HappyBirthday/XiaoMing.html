@@ -1,0 +1,357 @@
+
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Happy Everyday!</title>
+		<meta name="author" content="Mike">
+		
+		
+		
+		<link rel="stylesheet" href="./jscss/style.css" type="text/css" media="all">
+		
+		
+<style>
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,500,300,600,700,800);
+body {
+  height: 100vh;
+  background-image: radial-gradient(#374566, #010203);
+  color: #ccc;
+  font-family: Raleway;
+  letter-spacing: 0.15em;
+  font-size: 20px;
+}
+canvas {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+}
+#wishes {
+  width: 20em;
+  margin: calc(20vh - 6.7em) auto;
+  border: 1px dotted;
+  text-align: center;
+  background: hsla(210, 50%, 15%, 0.75);
+}
+span {
+  display: inline-block;
+}
+span.jump {
+  animation: jump 0.25s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0s 2 alternate;
+}
+@keyframes jump {
+  to {
+    transform: translateY(-0.7em);
+  }
+}
+
+#pleaseClick {
+  position: absolute;
+  background: hsla(210, 50%, 15%, 0.75);
+  font-size: 80%;
+  width: 10em;
+  text-align: center;
+  left: calc(50vw - 5em);
+  top: calc(50vh - 12.5em);
+  animation: jump 1s ease-in-out infinite alternate;
+}
+#pleaseClick span {
+  font-size: 200%;
+}
+
+.control {
+  text-align: center;
+}
+
+input[type="range"],
+input[type="range"]::-webkit-slider-runnable-track,
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 18em;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  background-color: #777;
+  width: 20px;
+  height: 20px;
+  border: 3px solid #374566;
+  border-radius: 50%;
+  margin-top: -9px;
+}
+
+input[type="range"]::-moz-range-thumb {
+  background-color: #777;
+  width: 15px;
+  height: 15px;
+  border: 3px solid #333;
+  border-radius: 50%;
+}
+
+input[type="range"]::-ms-thumb {
+  background-color: #777;
+  width: 20px;
+  height: 20px;
+  border: 3px solid #333;
+  border-radius: 50%;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  background-color: #777;
+  height: 3px;
+}
+
+input[type="range"]:focus::-webkit-slider-runnable-track {
+  outline: none;
+}
+
+input[type="range"]::-moz-range-track {
+  background-color: #777;
+  height: 3px;
+}
+
+input[type="range"]::-ms-track {
+  background-color: #777;
+  height: 3px;
+}
+
+input[type="range"]::-ms-fill-lower {
+  background-color: HotPink;
+}
+
+input[type="range"]::-ms-fill-upper {
+  background-color: black;
+}
+</style>
+
+
+		<!--导库-->
+		<script type="text/javascript" src="./jscss/jquery.js"></script>
+		<!-- 图片幻灯片效果-->
+		<script type="text/javascript" src="./jscss/roundabout.js"></script>
+		<script type="text/javascript" src="./jscss/roundabout_shapes.js"></script>
+		<script type="text/javascript" src="./jscss/gallery_init.js"></script>
+		<!-- 下雪-->
+		<script type="text/javascript" src="./jscss/snowstorm.js"></script>
+		<!-- 打字机效果-->		
+		<script type="text/javascript" src="./jscss/text.js"></script>
+		<!-- 画爱心-->
+		<script type="text/javascript" src="./jscss/ga.js" async=""></script>
+		<script type="text/javascript" src="./jscss/heart.js"></script>
+		<!-- 移动div-->
+		<script type="text/javascript" src="./jscss/move.js"></script>
+		<!-- 显示时间 -->
+		<script type="text/javascript" src="./jscss/time.js"></script>
+		<!-- 设置文字跟随鼠标 -->
+		<script type="text/javascript" src="./jscss/makesnake.js"></script>
+		
+		<!-- <script type="text/javascript" src="./jscss/jquery.min.js"></script> -->
+		<script src="./jscss/tripledes.js"></script>
+		<script src="./jscss/mode-ecb.js"></script>
+		
+		</head><body>
+		<!-- thanks for watching! -->
+		<span id="span0" class="spanstyle">T</span>
+		<span id="span1" class="spanstyle">h</span>
+		<span id="span2" class="spanstyle">a</span>
+		<span id="span3" class="spanstyle">n</span>
+		<span id="span4" class="spanstyle">k</span>
+		<span id="span5" class="spanstyle">s</span>
+		<span id="span6" class="spanstyle"></span>
+		<span id="span7" class="spanstyle">f</span>
+		<span id="span8" class="spanstyle">o</span>
+		<span id="span9" class="spanstyle">r</span>
+		 <span id="span10" class="spanstyle"> </span>
+		 <span id="span11" class="spanstyle">w</span>
+		 <span id="span12" class="spanstyle">a</span>
+		 <span id="span13" class="spanstyle">t</span>
+		 <span id="span14" class="spanstyle">c</span>
+		 <span id="span15" class="spanstyle">h</span>
+		 <span id="span16" class="spanstyle">i</span>
+		 <span id="span17" class="spanstyle">n</span>
+		 <span id="span18" class="spanstyle">g</span>
+		 <span id="span19" class="spanstyle">!</span>
+	
+
+	
+		<script type="text/javascript">
+			//setTimeout(makesnake, 42000);
+			setTimeout(makesnake, 2000);
+			//makesnake();
+			function getQueryString(name) {
+				var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+				var r = window.location.search.substr(1).match(reg);
+				if (r != null) return decodeURI(r[2]); return null;
+			 }
+ 
+ 
+			 var a = getQueryString("who");
+			 var b = getQueryString("key");
+			 var who = "Bob";
+			 var key = "Wang";
+			 if(null!=a){
+				who = a;
+				 if(null!=b){
+					key = b;
+				}
+				else{
+					key = "";
+				}
+			 }else{
+				var name,age;
+				name=prompt("她?"); 
+				age=prompt("他？");
+				window.location.href=window.location.href+"?who="+name+"&key="+age;
+			}
+			 
+			  //DES 解密 加密
+			function encryptByDES(message, key) {
+					var keyHex = CryptoJS.enc.Utf8.parse(key);
+					var encrypted = CryptoJS.DES.encrypt(message, keyHex, {
+						mode: CryptoJS.mode.ECB,
+						padding: CryptoJS.pad.Pkcs7
+					});
+					return encrypted.toString();
+				}
+				//DES 解密
+			function decryptByDES(ciphertext, key) {
+				var keyHex = CryptoJS.enc.Utf8.parse(key);
+				// direct decrypt ciphertext
+				var decrypted = CryptoJS.DES.decrypt({
+					ciphertext: CryptoJS.enc.Base64.parse(ciphertext)
+				}, keyHex, {
+					mode: CryptoJS.mode.ECB,
+					padding: CryptoJS.pad.Pkcs7
+				});
+				return decrypted.toString(CryptoJS.enc.Utf8);
+			}
+			
+			
+		</script>
+		<!--#Header-->
+		<div id="header" style="opacity:0.85">
+			<div id="title">
+				Happy Birthday!
+			</div>
+		</div>
+
+		<!-- #myContent -->
+		<div id="myContent">
+				<span id="blink" style="display: none;">_1234567</span></div>
+		<div id="contentToWrite" style="display:none">
+			    一时间不知道从哪说起,         <br>
+				真爱来了，我们要好好把    <br>
+				一时间不知道从哪说起,         <br>
+				真爱来了，我们要好好把握。不管面临多大的压力，<br>
+				不管前面的路如何崎岖.<br>
+				不管经历过什么,我仍坚信最浪漫的事就是和<br>
+				你一起慢慢变老.<br>
+				还记得否,曾经的点点滴滴，从相识到现在，<br>
+				从冷漠到关心,从谢绝到依赖，从生疏到相爱,<br>
+				一切似乎都是那么遥远,又似乎那么触手可及.<br>
+				正如某人说的那样,但求岁月静好,现世安稳.<br>
+				一生守候不是一句简单而苍白的山盟海誓，<br>
+				而是无数个平淡的日子同舟共济，相濡以沫.<br>
+				<br>
+				-----------------------Just for You<br>
+				-----------------------Can you believe?Ah!<br>
+		</div>
+		</div>
+		
+		
+
+		<!-- #container -->
+		<div id="container">
+			<ul id="myRoundabout" class="roundabout-holder" style="padding: 0px; position: relative; z-index: 100;">
+		  	<li class="roundabout-moveable-item" ><img src="" alt=""></li>
+		  	<li class="roundabout-moveable-item" ><img src="" alt=""></li>
+		  	<li class="roundabout-moveable-item" ><img src="" alt=""></li>
+		  	<li class="roundabout-moveable-item" ><img src="" alt=""></li>
+		  	<li class="roundabout-moveable-item" ><img src="" alt=""></li>
+		  	<li class="roundabout-moveable-item" ><img src="" alt=""></li>
+		  	<li class="roundabout-moveable-item" ><img src="" alt=""></li>
+			</ul>
+		</div>
+		
+		<script type="text/javascript">
+		//notice xiaosu
+			//var d = "Yf+2rb5E2VgB5fAOyqip22Wa49G+UpTPOG70JB3a1rI2MzCghESql9LaUSw+aE5I";
+			var d = "da7+SNYWMa30dMpMUTrLRNgXmx1zXN4DL4kks9sG9jO9HUoRyCGiC6z66hdL9VFA";
+
+			if(d===encryptByDES(encryptByDES(encryptByDES(who,key),key),key)){
+				//var text="7OE/ZksCU6cPznijumHsp8fOPqfHxgLdOf9DxsuY8bcIRBNYXdNJ1CPKTYcqxOsv4oi5Hiu2sUP1L5EKV+cbxF5X+55vP7b3eORfwqf8YbOFgX/C3x7BtxdrW4WZcLowA1sXSG5ZvuPQCW8t0a0aJu4hNxBdppeEmkDQMNtA2bJYKM7a+mFpeEHm/W47x4dcZiT8RvIlkHf2uErEz1Sp+v2ns9jjLFBaUXFEGmsx3ho5Vz+55PHUSMYKpYFEazamPb/jh0/unzqNOb3tEvfNDoXHEMNvIZzaMRhNYF5TNxBVuPoPll4WuW34Uipze4Q2jclqQ8zOmzOAGD5rIHisNfCd91iWFn0dNTR+wEjqaBG4FETuQ4tPoxdVxFhUeZ0lXkB/y9IZbuWSG9T/HpWblm2ZZNOK7a9b1RK4XV2yDRqk+tMj4UXlwdamidtsy/EcuIC3vl9QgbHfDliqjl2tWwcCQv6isaA4wZoJuWE5FoiISuF6IGSWkb4RCb0kKqA+oIQ9uIyIKxjHJfCywJqWyKT60yPhReXBgiXu0474LIKa0tOvf+7oj7D4QID0mCaBBlCLvfgJ6rCi5tC6DIlPd4wt5qYCLwot9JE5zMDq9SgQC6RoixtmLvTLpbsXqi1dOf9DxsuY8bdIi2kSMWJt+YXOaYqfrCmdlCkhvDsS3V8DWxdIblm+48E45h4WjWkZOygAekZt164D4idy66Cq+1NJYajf641LKIi09CK6xn+Gnv61pCzPdcdM9fnJxP/xSIQs0yY3M75PXULDcp0i3wW3BuQ6SULZFheb/wTty9t7yAvKfdZh7APGQS3415oIUf7MKOoH+ADy6hp69J2oySdHcxRmw6Rl5jm3zn2kOAlroCp/97+qcIfUU/6A6oGG5PTmKucyWOy+yPaP+UBt/cYKpYFEazamfNaH29rJrIS/MpVaIXtZQFI3+PA7ifwntMN1qc+KdGpL/8Fiknp6asY9F3/NucfISIQs0yY3M77viLdg95jLKoROHLt5AFTohE4cu3kAVOgGTmO/R6NEaR9IDoDZ4jJTUHD0QzFNhiEhvojP6vL/0Q==";
+				var text="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";
+				var string = decryptByDES(text,encryptByDES(encryptByDES(who,key),key));
+				var t= decodeURI(string);
+				document.getElementById('contentToWrite').innerHTML=t;
+				writeContent(true);
+
+				var src = "HrPNYvYGpc1/9N2NVHMzPpvY0+Av5Vfy3UgxftnOwsuOO7f1nbF+mF0ssv1wj6rN79XG0tiREjwzynv2KAD+iQ==";
+				var src = decryptByDES(src,encryptByDES(encryptByDES(who,key),key));
+				var a = $("#myRoundabout li");
+				for(i=0;i<7;i++){
+					a[i].firstChild.src=src+(i+1)+".jpg";
+				}
+			}else{
+				writeContent(false);
+				alert("这都忘记了么   T.T");
+				window.location.href=window.location.origin+window.location.pathname;
+			}
+		</script>
+		
+		<script type="text/javascript">
+			setTimeout(move, 15000);
+			//setTimeout(move, 2000);
+			
+		</script>
+  		
+  		<!-- #bg -->
+		<div id="bg">
+			<canvas id="canvas" width="1583" height="709"><c style="color: #FFF; text-shadow:2px 3px 3px #222; font-family:Microsoft YaHei; font-size:50px">你的浏览器过时了,试试火狐吧!</c></canvas>
+		</div>
+
+		<!-- #time -->
+		<div id="time">
+			<span id="show">
+			
+			<div id="pleaseClick" style="font-size: 7px;">(You can click blew)<br><span></span></div>
+			<div id="wishes">
+			  <p id="p1"></p>
+			  <p id="p2"></p>
+			  <p id="p3"></p>
+			  <p id="p4"></p>
+			  <p class="control" style="display: none;" ><label for="inputSpeed"><!--Speed: --></label><br><input type="range" id="inputSpeed" min="0.1" max="2" step="0.1" value="0.5"></p>
+			</div>
+			
+			</span>
+			<!-- 设置生日音乐 -->
+		<script type="text/javascript" src="./jscss/musicxiaoming.js"></script>
+			<script type="text/javascript">
+				//setTimeout("showTime()", 40000);
+				//setTimeout("setTimeout()", 10000);
+				//setTimeout(showSong, 10000);
+			</script>
+			
+			
+		</div>
+		
+		
+		
+		
+
+	
+	
+ 
+ 
+ <div style="display:none">
+  <!-- visitors -->
+  <!-- github blog-->
+  <script type="text/javascript">
+  var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+  document.write(unescape("%3Cspan id='cnzz_stat_icon_1271464027'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s13.cnzz.com/z_stat.php%3Fid%3D1271464027%26online%3D1%26show%3Dline' type='text/javascript'%3E%3C/script%3E"));
+  </script>
+  <!--all blog-->
+  <script src="https://s13.cnzz.com/z_stat.php?id=1264550437&web_id=1264550437" language="JavaScript"></script>
+  </div>
+  
+  
+
+		
+		
+</body>
